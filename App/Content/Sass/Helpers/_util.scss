@@ -1,0 +1,69 @@
+/* --- Btn Generator --- */
+@mixin btnColorGenerator($btn-color, $btn-name) {
+    $input-selector: "";
+
+    @if($btn-name == "") {
+        $input-selector: '.btn';
+    }
+    @else {
+        $input-selector: '.btn.#{$btn-name}';
+    }
+
+    #{$input-selector} {
+        background: $btn-color;
+        border: 0;
+        border-bottom: 2px solid darken($btn-color, 11%);
+
+
+        &:hover, &.disabled {
+            background: darken($btn-color, 3%);
+        }
+
+        &:active {
+            background: darken($btn-color, 11%);
+            outline: none;
+        }
+    }
+}
+
+$fix-mqs: false !default;
+
+@mixin respond-min($width) {
+    // If we're outputting for a fixed media query set...
+    @if $fix-mqs {
+        // ...and if we should apply these rules...
+        @if $fix-mqs >= $width {
+            // ...output the content the user gave us.
+            @content;
+			.test {}
+        }
+    }
+    @else {
+        // Otherwise, output it using a regular media query
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-max($width) {
+	@if $fix-mqs {
+		@if $fix-mqs <= $width {
+			@content;	
+		}
+	}
+	@else {
+		@media screen and (max-width: $width) {
+			@content;
+		}
+	}
+}
+
+$old-ie: false !default;
+
+@mixin old-ie {
+    // Only use this content if we're dealing with old IE
+    @if $old-ie {
+        @content;
+    }
+}

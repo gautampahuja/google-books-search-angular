@@ -1,0 +1,144 @@
+﻿a:hover, a:focus{
+  color: #fff;
+}
+main {
+  padding-top: 64px;
+  float: left;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 0 !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  .input-container{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .sort-by-options{
+    font-weight: 400;
+    float: right;
+    select{
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+  #resultsTbl{
+    .book{
+      display: inline-block;
+      width: 225px;
+      padding: 20px;
+      position: relative;
+      margin: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      background-color: #fff;
+      cursor: pointer;
+      &:hover .title{
+        text-decoration: underline;
+      }
+      .book-image{
+        height: 220px;
+        margin: 0 auto;
+        width: 180px;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      span.title {
+        font-size: 18px;
+        font-weight: 400;
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 300;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .book-detail {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: left;
+        margin-top: 10px;
+      }
+      .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        &:hover{
+          opacity: 0.1;
+          background-color: gray;
+        }
+      }
+    }
+  }
+
+}
+
+.main-content {
+  padding: 50px;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  animation: fadein 1s;
+}
+
+.main-content.book-detail{
+  background: #fff;
+  text-align: left;
+  font-weight: 400;
+  a{
+    &:hover, &:focus{
+      color: #000;
+    }
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 30px;
+  }
+  h4{
+    text-decoration: underline;
+  }
+  .book-image{
+    text-align: left;
+    height: 100%;
+    display: inline-block;
+  }
+  .book-container{
+    color: #000;
+    height: 100%;
+    margin: 0 20px;
+    display: inline-block;
+    div{
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    b{
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    .author-txt{
+      font-weight: 500;
+    }
+  }
+  img{
+    border: 1px solid #808080;
+    height: 300px;
+    width: 200px;
+  }
+}
+.loading-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .icon-spin1:before{
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,48 @@
+﻿header {
+    background-color: #373737;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    &.ng-hide {
+        @include respond-min($lg-break) {
+            display: block !important;
+            position: fixed !important;
+            left: 0;
+            top: 64px;
+        }
+    }
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 1.8em;
+    float: right;
+    background: none;
+    border: none;
+
+    @include respond-min($lg-break) {
+        display: none;
+    }
+}

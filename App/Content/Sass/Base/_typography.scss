@@ -1,0 +1,68 @@
+﻿h1, h2, p {
+    font-weight: 100;
+}
+
+a {
+    color: #2d2d2d;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        color: #2d2d2d;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.2em;
+
+    @include respond-min(600px) {
+        font-size: 2.2em;
+    }
+}
+
+h2 {
+    display: inline-block;
+    font-size: 1.2em;
+
+    @include respond-min(600px) {
+        font-size: 1.6em;
+        margin-top: 20px;
+    }
+}
+
+.heading {
+    padding: 12px 12px 16px 12px;
+    margin-bottom: 0;
+    background-color: #f7f6f3;
+    border-bottom: 1px solid #c4c4c4;
+    display: block;
+    width: 100%;
+    font-size: 1.9em;
+
+    &--red {
+        @extend .heading;
+        border-top: 6px solid $color-red;
+    }
+
+    &--blue {
+        @extend .heading;
+        border-top: 6px solid $color-blue;
+    }
+
+    &--green {
+        @extend .heading;
+        border-top: 6px solid $color-green;
+    }
+
+    &--yellow {
+        @extend .heading;
+        border-top: 6px solid $color-yellow;
+    }
+
+    &--purple {
+        @extend .heading;
+        border-top: 6px solid $color-purple;
+    }
+}

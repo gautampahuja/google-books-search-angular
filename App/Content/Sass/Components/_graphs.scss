@@ -1,0 +1,11 @@
+﻿.color-key {
+    list-style: none;
+    padding: 0;
+
+    &__label {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 4px;
+    }
+}

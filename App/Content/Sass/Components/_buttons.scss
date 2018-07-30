@@ -1,0 +1,31 @@
+﻿
+@include btnColorGenerator(#ccc, 'btn');
+@include btnColorGenerator($color-red, 'red');
+@include btnColorGenerator($color-blue, 'blue');
+@include btnColorGenerator($color-green, 'green');
+@include btnColorGenerator($color-yellow, 'yellow');
+@include btnColorGenerator($color-purple, 'purple');
+
+.btn {
+    display: block;
+    padding: 10px 24px 11px 24px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    &:hover {
+        color: #fff;
+    }
+
+    &:active {
+        padding: 14px 24px 10px 24px;
+    }
+
+    &:focus {
+        color: #fff;
+        outline: none;
+    }
+}
+
+.btn-margin {
+    margin: 0 4px;
+}

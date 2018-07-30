@@ -1,0 +1,68 @@
+﻿/************************************* 
+     Component: Basic Checkbox 
+*************************************/
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B8B8B8;
+    background: #FFF;
+    border-radius: 3px;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    transition: all .2s;
+    color: #454545;
+    speak: none;
+}
+
+/* --- Checkboxes --- */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    font-family: 'fontello';
+    content: "\e805" !important;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[type="checkbox"]:disabled + label:after {
+    color: #d3d3d3;
+}
+
+/* accessibility */
+/*[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px solid $focus-color;
+}*/

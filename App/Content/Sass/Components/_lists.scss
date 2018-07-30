@@ -1,0 +1,97 @@
+﻿.search-list {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+
+    &__link {
+        display: block;
+        background-color: #fff;
+        border-bottom: 1px solid $color-grey-light;
+        list-style: none;
+        padding: 14px;
+        text-decoration: none;
+
+        &:hover {
+            background: #fdfdfd;
+        }
+    }
+
+    &__url, &__source {
+        font-size: 0.9em;
+        color: #4b4b4b;
+        color: $color-green;
+    }
+
+    &__title {
+        font-size: 1.1em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.picture-list {
+    list-style: none;
+    overflow: auto;
+    padding: 4px;
+
+    &__item {
+    }
+
+    &__img {
+        width: 200px;
+        height: 200px;
+        margin: 4px;
+        float: left;
+        background-color: #fff;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.video-list {
+    list-style: none;
+    overflow: auto;
+    padding: 4px;
+
+    &__link {
+        position: relative;
+        max-width: 295px;
+        width: 100%;
+        margin: 0 6px 6px 0;
+        background: #fff;
+        overflow: auto;
+        float: left;
+        font-size: 0.9em;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__img {
+        width: 140px;
+        height: 140px;
+        margin: 4px;
+        float: left;
+        background-color: #fff;
+        background-position: center center;
+        background-size: cover;
+        // Refactor to mixin
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1s; /* Firefox < 16 */
+        animation: fadein 1s;
+    }
+
+    &__duration {
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+    }
+}

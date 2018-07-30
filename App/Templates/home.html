@@ -1,0 +1,13 @@
+﻿<h1 class="heading--red">Google Books Search</h1>
+<div class="main-content">
+    <section class="row input-container">
+        <div class="col-12-md">
+            <search-input value="baseSearchCtrl.query" order-prop="baseSearchCtrl.orderProp" ng-model="baseSearchCtrl.results" class="search-form--red"></search-input>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-12-md">
+            <search-results-web order-prop="baseSearchCtrl.orderProp" ng-model="baseSearchCtrl.results"></search-results-web>
+        </div>
+    </section>
+</div>

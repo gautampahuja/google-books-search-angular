@@ -1,0 +1,60 @@
+$full-width-max: 48em;
+$full-width-app: 48.125em;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    background: #f1f1f1;
+    color: $color-type;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.ng-hide {
+    /* this is just another form of hiding an element */
+    display: block !important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.ng-pagination {
+  font-family: 'Microsoft YaHei';
+  font-size: 12px;
+  color: #337ab7;
+}
+
+.ng-pagination>ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.ng-pagination>ul>li {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.ng-pagination>ul>li:hover,
+.ng-pagination>ul>li.active {
+  background-color: #eee;
+  color: #23527c;
+}
+
+.ng-pagination input {
+  margin-left: 2px;
+  width: 30px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  vertical-align: 1px;
+  text-align: center;
+  padding: 6px 3px;
+}
